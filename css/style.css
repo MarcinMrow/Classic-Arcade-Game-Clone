@@ -1,0 +1,113 @@
+body {
+    text-align: center;
+}
+
+h1 {
+	display: block;
+	font-size: 2em;
+	/*
+	-webkit-margin-before: 0.67em;
+	-webkit-margin-after: 0.67em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;
+	*/
+	margin: auto;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: center;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.score-panel .hearts {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+	color: red;	
+}
+
+.score-panel .hearts li {
+    list-style: none;
+    display: inline-block;	
+}
+
+.score-panel .restart {
+    /* float: center; */
+    cursor: pointer;	
+	float: right;
+}
+
+.score-panel .points {
+	font-size: 16px;
+}
+
+/*
+ * Styles for the Success Dialogue Box
+ */
+
+.modal {
+	background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+	visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+	font-size: 28px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+.play-again {
+    background-color: #2e3d49;
+    padding: 1em 1em;
+    font-size: 1em;
+    display: block;
+    margin: 40px auto;
+    width: 30%;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+h2 {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total-moves {
+	font-size: 28px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;	
+}
+
