@@ -11,6 +11,16 @@ let successBox = document.getElementById("myModal");
 let statsBoard = document.createElement("h1");
 document.body.appendChild(statsBoard);
 
+/*
+// add stats board to the canvas
+let statsBoardScore = document.createElement("h1");
+document.body.appendChild(statsBoardScore);
+
+// add stats board to the canvas
+let statsBoardLives = document.createElement("h1");
+document.body.appendChild(statsBoardLives);
+*/
+
 // game description popup
 function myFunction() {
 	alert('This is ARCADE GAME. You want to get to the water without colliding into any of the Bugs! GOOD LUCK!')
@@ -21,23 +31,6 @@ let score = 0;
 
 // declare lives
 let lives = 4;
-
-
-// checking collisions
-var checkCollisions = function() {
-	for (let i = 0; i < allEnemies.length; i++) {
-		if ((allEnemies[i].x < player.x + 40) &&
-		(player.x < allEnemies[i].x + 60) &&
-		(allEnemies[i].y < player.y + 60) &&
-		(player.y < allEnemies[i].y + 40)) {
-			lives--;
-			if (lives = 0) {
-			reset();
-			}
-		}
-	}
-};
-
 
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
@@ -97,10 +90,11 @@ var Player = function(x, y) {
 	// this.lives = 4;
 }
 
-//
+// 
 Player.prototype.update = function(dt) {
-	statsBoard.innerHTML = `Score: ${score} Lives: ${lives}`;
-	checkCollisions();
+	statsBoard.innerHTML = `Score: ${score} ___________________ Lives: ${lives}`;
+	// statsBoardScore.innerHTML = `Score: ${score}`;
+	// statsBoardLives.innerHTML = `Lives: ${lives}`;
 }
 
 //
@@ -110,24 +104,24 @@ Player.prototype.render = function() {
 
 //
 Player.prototype.reset = function() {
-	// this.score = score;
-	// this.lives = 4;
-	// this.player();
-	this.x = 202; // mentor
-	this.y = 405; // mentor
+	this.x = 202;
+	this.y = 405;
 }
 
 
+
+/*
 //entitites collision detection/ player's life reduction/ end of the game
 function collisionDetection() {
 	var collision = checkCollisions(allEnemies);
 	if (this.collision) {
-		if (this.lives !== 0) {
-			this.lives -= 1;
-			// reset();
+		if (lives !== 0) {
+			--lives;
+			update();
         }
 	}
-}		
+}
+*/		
 
 /*
 // create and update the score display
@@ -159,7 +153,6 @@ Player.prototype.handleInput = function(keyPress) {
 			player.x = 202;
 			player.y = 405;
 			score++;
-			// lives--;
 		}, 100);
 	}
 }
@@ -170,6 +163,21 @@ Player.prototype.handleInput = function(keyPress) {
 
 var allEnemies = [];
 var enemyPosition = [63, 147, 230];
+
+// check collisions
+var checkCollisions = function() {
+	for (let i = 0; i < allEnemies.length; i++) {
+		if ((allEnemies[i].x < player.x + 40) &&
+		(player.x < allEnemies[i].x + 60) &&
+		(allEnemies[i].y < player.y + 60) &&
+		(player.y < allEnemies[i].y + 40)) {
+			--lives;
+			if (lives === 0) {
+			gameRestart();
+			} 
+		}
+	}
+};
 
 enemyPosition.forEach(function(positionY) {
 	enemy = new Enemy(0, positionY, 200);
@@ -183,9 +191,12 @@ function gameRestart() {
 	player.reset();
 	lives = 4;
 	score = 0;
-	// lives.reset();
-	// score.reset();
-	// player.score = 0; // ?
+}
+
+// click play-again button to play the game again
+function playAgain() {
+	successBox.classList.remove("show");
+		gameRestart();
 }
 
 // This listens for key presses and sends the keys to your

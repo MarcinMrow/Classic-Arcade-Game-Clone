@@ -4,14 +4,12 @@ body {
 
 h1 {
 	display: block;
-	font-size: 2em;
-	/*
+	font-size: 30px;
 	-webkit-margin-before: 0.67em;
 	-webkit-margin-after: 0.67em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 	font-weight: bold;
-	*/
 	margin: auto;
 }
 
@@ -19,33 +17,21 @@ h1 {
  * Styles for the Score Panel
  */
 
+ 
 .score-panel {
     text-align: center;
-    width: auto;
-    margin-bottom: 5px;
+	margin: auto;
+	width: 505px;
+	justify-content: center;
 }
 
-.score-panel .hearts {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
-	color: red;	
-}
-
-.score-panel .hearts li {
-    list-style: none;
-    display: inline-block;	
-}
-
-.score-panel .restart {
-    /* float: center; */
-    cursor: pointer;	
-	float: right;
-}
-
-.score-panel .points {
-	font-size: 16px;
+.restart {
+	cursor: pointer;	
+	float: center;
+    background-color: #dad4d4;
+    border-radius: 20px;
+	width: 505px;
+	text-align: center;
 }
 
 /*
@@ -110,4 +96,3 @@ h2 {
     align-items: center;
     flex-direction: column;	
 }
-
