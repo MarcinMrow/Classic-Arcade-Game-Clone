@@ -16,7 +16,7 @@ For detailed instructions on project specification, check out this [guide](https
 
 ## Play the Arcade Game
 
-[Click here to play a game.]( ... )
+[Click here to play a game.](https://marcinmrow.github.io/Classic-Arcade-Game-Clone/)
 
 ## Interface design
 
