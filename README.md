@@ -1,7 +1,4 @@
-frontend-nanodegree-arcade-game
-===============================
-
-# FEND Classic Arcade Game Clone Project
+# Front-End Nanodegree Classic Arcade Game Clone Project
 
 - It is a real-life and complete browser-based arcade game. 
 - Created for [**Front-End Web Developer Nanodegree Program**](https://eu.udacity.com/)
@@ -10,12 +7,12 @@ For detailed instructions on project specification, check out this [guide](https
 
 ## How The Game Works
 
-In this game you have a Player and Enemies (Bugs). 
-The goal of the player is to reach the water, without colliding into any one of the enemies. 
-The player can move left, right, up and down (use arrow keys).
-The enemies move in varying speeds on the paved block portion of the scene. 
-Once the player collides with an enemy, the game is reset and the player moves back to the start square.
-Once the player reaches the water the game is won.
+1. In this game you have a Player and Enemies (Bugs). 
+2. The goal of the player is to reach the water, without colliding into any one of the enemies. 
+3. The player can move left, right, up and down (use arrow keys).
+4. The enemies move in varying speeds on the paved block portion of the scene. 
+5. Once the player collides with an enemy, the game is reset and the player moves back to the start square.
+6. Once the player reaches the water the game is won.
 
 ## Play the Arcade Game
 
@@ -23,15 +20,14 @@ Once the player reaches the water the game is won.
 
 ## Interface design
 
-Application components are usable across desktop, tablet and phone browsers.
+Application components are usable across desktop browsers.
 
 ## Dependencies
 
 1. Arcade Game has been created as the Udacity Project and based on the **starters code**.
-2. **JavaScript**: [Recources for developers](https://developer.mozilla.org/en-US/).
+2. **JavaScript**: [Resources for developers](https://developer.mozilla.org/en-US/).
 3. **GIT**: [Writing on GitHub](https://help.github.com/articles/basic-writing-and-formatting-syntax/#links).
 4. **Style Guidelines**: [Udacity Frontend Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html).
-5. 
 
 ## Table of Contents
 
