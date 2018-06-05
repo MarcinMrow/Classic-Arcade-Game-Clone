@@ -28,6 +28,7 @@ Application components are usable across desktop browsers.
 2. **JavaScript**: [Resources for developers](https://developer.mozilla.org/en-US/).
 3. **GIT**: [Writing on GitHub](https://help.github.com/articles/basic-writing-and-formatting-syntax/#links).
 4. **Style Guidelines**: [Udacity Frontend Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html).
+5. **Udacity Community**: [Forums](https://discussions.udacity.com/) and [Knowledge](https://knowledge.udacity.com/) and [Slack](https://slack.com/).
 
 ## Table of Contents
 
