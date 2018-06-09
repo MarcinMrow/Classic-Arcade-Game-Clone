@@ -7,10 +7,10 @@ For detailed instructions on project specification, check out this [guide](https
 
 ## Table of Contents
 
-* [How to play the game](#how to play the game)
-* [How the game works](#how the game works)
-* [Play the Arcade Game](#play the Arcade Game)
-* [Interface design](#interface design)
+* [How to play the game](#How to play the game)
+* [How the game works](#How the game works)
+* [Play the Arcade Game](#Play the Arcade Game)
+* [Interface design](#Interface design)
 * [Dependencies](#dependencies)
 * [Instructions](#instructions)
 
