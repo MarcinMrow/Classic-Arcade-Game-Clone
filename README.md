@@ -5,15 +5,6 @@
 
 For detailed instructions on project specification, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
 
-## Table of Contents
-
-* [How to play the game](#How to play the game)
-* [How the game works](#How the game works)
-* [Play the Arcade Game](#Play the Arcade Game)
-* [Interface design](#Interface design)
-* [Dependencies](#dependencies)
-* [Instructions](#instructions)
-
 ## How to play the game
 
 * [Play it here](https://marcinmrow.github.io/Classic-Arcade-Game-Clone/).
