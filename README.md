@@ -8,6 +8,9 @@ For detailed instructions on project specification, check out this [guide](https
 ## How to play the game
 
 * [Play it here](https://marcinmrow.github.io/Classic-Arcade-Game-Clone/).
+
+or
+
 * To play it locally:
 1. Download/ clone the repository 
 ```

@@ -1,14 +1,8 @@
-// restart button
-let restartBtn = document.querySelector(".restart");
+// Defines that JavaScript code is executed in "strict mode"
+"use strict";
 
 // access the congratulation popup/ succes box
 let successBox = document.getElementById("myModal");
-
-/*
-// add stats board to the canvas
-let statsBoard = document.createElement("h1");
-document.body.appendChild(statsBoard);
-*/
 
 // add stats board to the canvas
 let statsBoardScore = document.createElement("h1");
@@ -26,7 +20,7 @@ let count = document.querySelector("h1");
 
 // game description popup
 function myFunction() {
-	alert('This is ARCADE GAME. You want to get to the water without colliding into any of the Bugs! GOOD LUCK!')
+	alert('This is ARCADE GAME. You want to get to the water without colliding into any of the Bugs! GOOD LUCK!');
 }
 
 // define variables for points and lives
@@ -71,7 +65,7 @@ Enemy.prototype.update = function(dt) {
 		
 		player.reset();
 		lives--;
-		if (lives == 0) {
+		if (lives === 0) {
 			// alert("You lost");
 			finishedGame();
 			// gameRestart();
@@ -94,49 +88,54 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-var Player = function(x, y) {
-	this.x = x;
-	this.y = y;
-	this.player = 'images/char-boy.png';
-}
-
-// Update the player's position/ shows score & lives
-Player.prototype.update = function(dt) {
-	// statsBoard.innerHTML = `Score: ${score} _______________ Lives: ${lives}`;
-	statsBoardScore.innerHTML = `Score: ${score}`;
-	statsBoardLives.innerHTML = `Lives: ${lives}`;
-}
-
-// Draw the player on the screen
-Player.prototype.render = function() {
-	ctx.drawImage(Resources.get(this.player), this.x, this.y);
-}
-
-// Move the player back to the starting position
-Player.prototype.reset = function() {
-	this.x = 202;
-	this.y = 405;
-}
- 
-Player.prototype.handleInput = function(keyPress) {
-	if (keyPress == 'left' && this.x > 0) {
-		this.x -= 102;
+class Player {
+	constructor(x, y, movement) {
+		this.x = x;
+		this.y = y;
+		// this.movement = movement;
+		this.player = 'images/char-boy.png';
 	}
-	if (keyPress == 'right' && this.x < 405) {
-		this.x += 102;
+	
+	// Update the player's position/ shows score & lives
+	update(dt) {
+		statsBoardScore.innerHTML = `Score: ${score}`;
+		statsBoardLives.innerHTML = `Lives: ${lives}`;
 	}
-	if (keyPress == 'up' && this.y > 0) {
-		this.y -= 83;
+	
+	// Draw the player on the screen
+	render() {
+		ctx.drawImage(Resources.get(this.player), this.x, this.y);
 	}
-	if (keyPress == 'down' && this.y < 405) {
-		this.y += 83;
+	
+	// Move the player back to the starting position
+	reset() {
+		let self = this;
+		self.x = 202;
+		self.y = 405;
 	}
-	if (this.y < 0) {
-		setTimeout(function() {
-			player.x = 202;
-			player.y = 405;
-			score++;
-		}, 100);
+	
+	// Move player with keyboard arrows
+	handleInput(keyPress) {
+		let self = this;
+		if (keyPress == 'left' && self.x > 0) {
+			self.x -= 102;
+		}
+		if (keyPress == 'right' && self.x < 405) {
+			self.x += 102;
+		}
+		if (keyPress == 'up' && self.y > 0) {
+			self.y -= 83;
+		}
+		if (keyPress == 'down' && self.y < 405) {
+			self.y += 83;
+		}
+		if (self.y < 0) {
+			setTimeout(function() {
+				player.x = 202;
+				player.y = 405;
+				score++;
+			}, 100);
+		}	
 	}
 }
 
@@ -148,7 +147,7 @@ var allEnemies = [];
 var enemyPosition = [63, 147, 230];
 
 enemyPosition.forEach(function(positionY) {
-	enemy = new Enemy(0, positionY, 200);
+	let enemy = new Enemy(0, positionY, 200);
 	allEnemies.push(enemy);
 });
 
