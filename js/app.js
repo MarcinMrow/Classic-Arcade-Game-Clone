@@ -94,6 +94,7 @@ class Player {
 		this.y = y;
 		// this.movement = movement;
 		this.player = 'images/char-boy.png';
+		
 	}
 	
 	// Update the player's position/ shows score & lives
@@ -131,8 +132,8 @@ class Player {
 		}
 		if (self.y < 0) {
 			setTimeout(function() {
-				player.x = 202;
-				player.y = 405;
+				self.x = 202;
+				self.y = 405;
 				score++;
 			}, 100);
 		}	
